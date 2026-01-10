@@ -2,6 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace win_notify_send;
 
+// nuget push win-notify-send.1.0.0.nupkg -Source https://www.nuget.org/api/v2/package
 class Program
 {
     [DllImport("wintoast.dll", CharSet = CharSet.Unicode)]
@@ -13,7 +14,6 @@ class Program
         if (OperatingSystem.IsWindows() == false)
         {
             Console.WriteLine("This program only runs on Windows.");
-            Environment.Exit(1);
             return 1;
         }
 
@@ -21,7 +21,6 @@ class Program
         {
             Console.WriteLine("Usage: win-notify-send <message>");
             Console.WriteLine("       win-notify-send <title> <message>");
-            Environment.Exit(1);
             return 1;
         }
 
