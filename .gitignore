@@ -193,6 +193,7 @@ publish/
 PublishScripts/
 
 # NuGet Packages
+/win-notify-send/nupkg/
 *.nupkg
 # NuGet Symbol Packages
 *.snupkg

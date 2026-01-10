@@ -16,12 +16,13 @@
 
 #define HR(hr) do { HRESULT _hr = (hr); Assert(SUCCEEDED(_hr)); } while (0)
 
+// https://github.com/mmozeiko/TwitchNotify/
 #include "WindowsToast.h"
 
 WINTOAST_API int fnToastSimple(wchar_t* notifyAppId, wchar_t* notifyName, wchar_t* xmlText)
 {
     BOOL result = FALSE;
-    int length = wcslen(xmlText);
+    size_t length = wcslen(xmlText);
 
     {
         WindowsToast toast;
@@ -29,7 +30,7 @@ WINTOAST_API int fnToastSimple(wchar_t* notifyAppId, wchar_t* notifyName, wchar_
         WindowsToast_Init(&toast, notifyName, notifyAppId);
         WindowsToast_HideAll(&toast, notifyAppId);
 
-        result = WindowsToast_ShowSimple(&toast, xmlText, length, NULL, 0);
+        result = WindowsToast_ShowSimple(&toast, xmlText, (int)length, NULL, 0);
 
         WindowsToast_Done(&toast);
     }

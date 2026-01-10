@@ -12,6 +12,8 @@
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>win-notify-send</ToolCommandName>
         <PackageOutputPath>./nupkg</PackageOutputPath>
+        
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
@@ -24,6 +26,10 @@
         <None Include="..\x64\$(Configuration)\wintoast.dll" Link="wintoast.dll">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
     </ItemGroup>
 
 </Project>

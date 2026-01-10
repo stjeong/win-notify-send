@@ -1,5 +1,7 @@
 #pragma once
 
+// https://github.com/mmozeiko/TwitchNotify/
+
 #include <windows.h>
 #include <windows.ui.notifications.h>
 
