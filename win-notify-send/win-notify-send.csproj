@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <RootNamespace>win_notify_send</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+
+        <!-- dotnet tool settings -->
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>win-notify-send</ToolCommandName>
+        <PackageOutputPath>./nupkg</PackageOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="nupkg\**" />
+      <EmbeddedResource Remove="nupkg\**" />
+      <None Remove="nupkg\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\x64\$(Configuration)\wintoast.dll" Link="wintoast.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

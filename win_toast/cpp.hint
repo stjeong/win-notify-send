@@ -1,0 +1,2 @@
+#define WINTOAST_API __declspec(dllexport)
+#define WINTOAST_API __declspec(dllimport)
