@@ -14,6 +14,10 @@
         <PackageOutputPath>./nupkg</PackageOutputPath>
         
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <PackageProjectUrl>https://github.com/stjeong/win-notify-send/</PackageProjectUrl>
+        <Author>techsharer@outlook.com</Author>
+        <Description>dotnet tool for notify-send in Windows</Description>
+        <PackageTags>dotnet-tool;notification;toast;win-toast;notify-send</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
