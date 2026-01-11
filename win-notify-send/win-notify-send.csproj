@@ -11,8 +11,9 @@
         <!-- dotnet tool settings -->
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>win-notify-send</ToolCommandName>
-        <PackageOutputPath>./nupkg</PackageOutputPath>
         
+        <PackageOutputPath>./nupkg</PackageOutputPath>
+        <PackageVersion>1.0.1</PackageVersion>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <PackageProjectUrl>https://github.com/stjeong/win-notify-send/</PackageProjectUrl>
         <Author>techsharer@outlook.com</Author>
